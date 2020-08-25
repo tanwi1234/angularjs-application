@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="lunchbox">
+  <head>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="style.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+
+    <style>
+      .message { font-size: 1.3em; font-weight: bold; }
+    </style>
+   
+  </head>
+<body ng-controller="myfirstcontroller">
+   <div class="container">
+     <h1>Lunch Checker</h1>
+
+         <div class="form-group" >
+             <input  type="text"
+             placeholder="list comma separated dishes you usually have for lunch"
+             class="form-control" ng-model="list">
+         </div>
+         <div class="form-group">
+             <button class="btn btn-default" ng-click="display()">Check If Too Much</button>
+         </div> 
+         <div class="form-group message">
+           <!-- Your message can go here. -->
+           {{msg}}
+
+         </div>
+   </div>
+
+</body>
+</html>
